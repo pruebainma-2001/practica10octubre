@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Sitio Web Básico</title>
+<style>
+body {
+    margin:0;
+    padding:0;
+    background-color:floralwhite;
+}
+
+h1 {
+    font-size:3rem;
+    font-family:cursive;
+    text-align:center;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: inherit;
+    text-align: center;
+}
+
+.formulario {
+    width:90%;
+    max-width:400px; 
+    margin: 20px auto;
+    border:solid 0.2rem #b4a888;
+    height:auto;
+    padding:1.5rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.formulario label {
+    font-family:sans-serif;
+    font-size::1rem;
+    margin-bottom: 0.5rem;
+}
+
+.formulario input {
+    width:90%;
+    padding:0.5rem; 
+    font-family: -serif;
+    font-size:1rem;
+    text-align:center;
+    margin-bottom:1rem;
+    box-sizing: border-box; /* Mantener el box-sizing para el padding */
+}
+
+</style>
+</head>
+<body>
+    
+<h1>¡¡ESTO ES UN FORMULARIO DE PRUEBA!!</h1>
+<h2>Introduce aquí tus datos para comprobar si funciona: </h2>
+
+<div class="formulario">
+<label for="persona1">Nombre:</label>
+<input type=text  id="persona1" oninput="sumar()">
+<br><br>
+<label for="edad1">Edad:</label>
+<input type="text"  id=edad1 oninput="sumar()">
+<br><br>
+<label for="altura1">Altura:</label>
+<input type="text" id="altura1" oninput="sumar()">
+<br><br>
+<input type="text" id="perso1">
+</div>
+
+<script>
+    function sumar(){
+//Variables para la primera persona//
+var persona1=document.getElementById("persona1").value;
+var edad1=document.getElementById("edad1").value;
+var altura1=document.getElementById("altura1").value;
+    var perso1 =document.getElementById("perso1");
+
+var datos1 = persona1 + "  " + edad1 + " años " +  altura1 +  " cm"
+perso1.value= datos1
+}   
+</script>
+    
+
+</body>
+</html>
